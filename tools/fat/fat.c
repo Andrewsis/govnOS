@@ -5,7 +5,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 
-typedef struct 
+typedef struct
 {
     uint8_t BootJumpInstruction[3];
     uint8_t OemIdentifier[8];
@@ -34,7 +34,7 @@ typedef struct
 
 } __attribute__((packed)) BootSector;
 
-typedef struct 
+typedef struct
 {
     uint8_t Name[11];
     uint8_t Attributes;
@@ -179,7 +179,7 @@ int main(int argc, char** argv)
         else printf("<%02x>", buffer[i]);
     }
     printf("\n");
-    
+
     free(buffer);
     free(g_Fat);
     free(g_RootDirectory);
